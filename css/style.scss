@@ -1,0 +1,153 @@
+$background-color: #111111;
+$surface-color: #1F1F1F;
+$primary-color: orange;
+$secondary-color: cyan;
+$text-for-background: white;
+$text-for-surface: white;
+$text-for-primary: white;
+
+$header-font: "Mulish", sans-serif;
+$content-font: "Mulish", sans-serif;
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: $background-color;
+    color: $text-for-surface;
+    font-family: $content-font;
+    font-weight: 400;
+}
+
+h1, h2, h3
+{
+    font-family: $header-font;
+    font-weight: 900;
+}
+
+nav
+{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $surface-color;
+    padding: 7px 25px;
+
+    h3
+    {
+        font-size: 27px;
+        letter-spacing: 2px;
+    }
+
+    ul
+    {
+        display: flex;
+        align-items: center;
+        list-style: none;
+
+        li
+        {
+            margin-left: 15px;
+
+            a
+            {
+                text-transform: uppercase;
+
+                &, &:visited
+                {
+                    color: $text-for-surface;
+                    text-decoration: none;
+                }
+
+                &:hover
+                {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+p
+{
+    font-size: 30px;
+}
+
+.page
+{
+    width: 100vw;
+    height: 100vh;
+    border-bottom: 2px solid red;
+
+    h2
+    {
+        text-align: right;
+        font-size: 80px;
+        padding: 70px 50px 0 0;
+        text-decoration: underline;
+        text-transform: uppercase;
+    }
+
+    .center-content
+    {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+#home
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1
+    {
+        font-size: 70px;
+        letter-spacing: 3px;
+        padding: 20px 0;
+        font-weight: 900;
+    }
+}
+
+#about
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#grid
+{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $surface-color;
+    padding: 20px;
+    $grid-size: 500px;
+    width: $grid-size;
+    max-height: $grid-size;
+    box-sizing: content-box;
+
+    .grid-square
+    {
+        width: $grid-size / 16;
+        height: $grid-size / 16;
+        padding: 3px;
+
+        .grid-square-content
+        {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
