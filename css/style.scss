@@ -1,12 +1,11 @@
 $background-color: #111111;
-$surface-color: #1F1F1F;
-$primary-color: orange;
-$secondary-color: cyan;
+$surface-color: #282A29;
+$primary-color: #FF7759;
 $text-for-background: white;
 $text-for-surface: white;
 $text-for-primary: white;
 
-$header-font: "Mulish", sans-serif;
+$header-font: "Bungee", cursive;
 $content-font: "Mulish", sans-serif;
 
 *
@@ -21,13 +20,11 @@ body
     background-color: $background-color;
     color: $text-for-surface;
     font-family: $content-font;
-    font-weight: 400;
 }
 
 h1, h2, h3
 {
     font-family: $header-font;
-    font-weight: 900;
 }
 
 nav
@@ -38,12 +35,14 @@ nav
     justify-content: space-between;
     align-items: center;
     background-color: $surface-color;
-    padding: 7px 25px;
+    padding: 30px 50px;
+    z-index: 10;
 
     h3
     {
-        font-size: 27px;
-        letter-spacing: 2px;
+        font-size: 50px;
+        letter-spacing: 6px;
+        color: $primary-color;
     }
 
     ul
@@ -54,11 +53,12 @@ nav
 
         li
         {
-            margin-left: 15px;
+            margin-left: 25px;
 
             a
             {
                 text-transform: uppercase;
+                font-size: 30px;
 
                 &, &:visited
                 {
@@ -69,6 +69,7 @@ nav
                 &:hover
                 {
                     text-decoration: underline;
+                    color: $primary-color;
                 }
             }
         }
@@ -84,24 +85,23 @@ p
 {
     width: 100vw;
     height: 100vh;
-    border-bottom: 2px solid red;
 
     h2
     {
         text-align: right;
-        font-size: 80px;
+        font-size: 100px;
         padding: 70px 50px 0 0;
         text-decoration: underline;
         text-transform: uppercase;
     }
 
-    .center-content
+    p
     {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        text-align: right;
+        font-size: 60px;
+        padding: 100px 50px 0 200px;
+        margin-left: auto;
+        letter-spacing: 3px;
     }
 }
 
@@ -114,10 +114,37 @@ p
 
     h1
     {
-        font-size: 70px;
-        letter-spacing: 3px;
-        padding: 20px 0;
-        font-weight: 900;
+        font-size: 110px;
+        letter-spacing: 15px;
+        margin-bottom: 70px;
+        text-shadow: 0 0 20px $primary-color;
+        text-decoration: underline;
+    }
+
+    #grid
+    {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: $surface-color;
+        padding: 35px;
+        $grid-size: 750px;
+        width: $grid-size;
+        max-height: $grid-size;
+        box-sizing: content-box;
+
+        .grid-square
+        {
+            width: $grid-size / 16;
+            height: $grid-size / 16;
+            padding: 7px;
+
+            .grid-square-content
+            {
+                width: 100%;
+                height: 100%;
+                //background-color: red;
+            }
+        }
     }
 }
 
@@ -125,29 +152,4 @@ p
 {
     display: flex;
     flex-direction: column;
-}
-
-#grid
-{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: $surface-color;
-    padding: 20px;
-    $grid-size: 500px;
-    width: $grid-size;
-    max-height: $grid-size;
-    box-sizing: content-box;
-
-    .grid-square
-    {
-        width: $grid-size / 16;
-        height: $grid-size / 16;
-        padding: 3px;
-
-        .grid-square-content
-        {
-            width: 100%;
-            height: 100%;
-        }
-    }
 }

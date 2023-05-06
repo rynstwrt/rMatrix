@@ -8,12 +8,10 @@ body {
   background-color: #111111;
   color: white;
   font-family: "Mulish", sans-serif;
-  font-weight: 400;
 }
 
 h1, h2, h3 {
-  font-family: "Mulish", sans-serif;
-  font-weight: 900;
+  font-family: "Bungee", cursive;
 }
 
 nav {
@@ -22,12 +20,14 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1F1F1F;
-  padding: 7px 25px;
+  background-color: #282A29;
+  padding: 30px 50px;
+  z-index: 10;
 }
 nav h3 {
-  font-size: 27px;
-  letter-spacing: 2px;
+  font-size: 50px;
+  letter-spacing: 6px;
+  color: #FF7759;
 }
 nav ul {
   display: flex;
@@ -35,10 +35,11 @@ nav ul {
   list-style: none;
 }
 nav ul li {
-  margin-left: 15px;
+  margin-left: 25px;
 }
 nav ul li a {
   text-transform: uppercase;
+  font-size: 30px;
 }
 nav ul li a, nav ul li a:visited {
   color: white;
@@ -46,6 +47,7 @@ nav ul li a, nav ul li a:visited {
 }
 nav ul li a:hover {
   text-decoration: underline;
+  color: #FF7759;
 }
 
 p {
@@ -55,21 +57,20 @@ p {
 .page {
   width: 100vw;
   height: 100vh;
-  border-bottom: 2px solid red;
 }
 .page h2 {
   text-align: right;
-  font-size: 80px;
+  font-size: 100px;
   padding: 70px 50px 0 0;
   text-decoration: underline;
   text-transform: uppercase;
 }
-.page .center-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.page p {
+  text-align: right;
+  font-size: 60px;
+  padding: 100px 50px 0 200px;
+  margin-left: auto;
+  letter-spacing: 3px;
 }
 
 #home {
@@ -79,34 +80,34 @@ p {
   align-items: center;
 }
 #home h1 {
-  font-size: 70px;
-  letter-spacing: 3px;
-  padding: 20px 0;
-  font-weight: 900;
+  font-size: 110px;
+  letter-spacing: 15px;
+  margin-bottom: 70px;
+  text-shadow: 0 0 20px #FF7759;
+  text-decoration: underline;
+}
+#home #grid {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #282A29;
+  padding: 35px;
+  width: 750px;
+  max-height: 750px;
+  box-sizing: content-box;
+}
+#home #grid .grid-square {
+  width: 46.875px;
+  height: 46.875px;
+  padding: 7px;
+}
+#home #grid .grid-square .grid-square-content {
+  width: 100%;
+  height: 100%;
 }
 
 #about {
   display: flex;
   flex-direction: column;
-}
-
-#grid {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #1F1F1F;
-  padding: 20px;
-  width: 500px;
-  max-height: 500px;
-  box-sizing: content-box;
-}
-#grid .grid-square {
-  width: 31.25px;
-  height: 31.25px;
-  padding: 3px;
-}
-#grid .grid-square .grid-square-content {
-  width: 100%;
-  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
