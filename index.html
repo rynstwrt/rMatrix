@@ -18,19 +18,10 @@
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#store">Store</a></li>
             <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#store">Store</a></li>
         </ul>
     </nav>
-
-    <div id="popup">
-        <div id="popup-exit">
-            <a href="#">X</a>
-        </div>
-        <div id="popup-content">
-            <video loop autoplay muted controls></video>
-        </div>
-    </div>
 
     <div id="home" class="page">
         <h1>rMatrix</h1>
@@ -43,14 +34,38 @@
         <p>This is more info about rMatrix.</p>
     </div>
 
-    <div id="store" class="page">
-        <h2>STORE</h2>
-    </div>
-
     <div id="gallery" class="page">
         <h2>GALLERY</h2>
-        <a onclick="openPopup('video', 'http://clips.vorwaerts-gmbh.de/VfE.ogv');">Text Video</a>
-        <a onclick="openPopup('image', 'assets/15.png');">Text Img</a>
+<!--        <div id="gallery-container">-->
+<!--            <a class="gallery-item">-->
+<!--                <img src="assets/15.png">-->
+<!--            </a>-->
+<!--            <a class="gallery-item">-->
+<!--                <img src="assets/15.png">-->
+<!--            </a>-->
+<!--            <a class="gallery-item">-->
+<!--                <video autoplay muted>-->
+<!--                    <source src="assets/video.mp4" type="video/mp4">-->
+<!--                </video>-->
+<!--            </a>-->
+<!--        </div>-->
+        <div id="gallery-container">
+            <a class="gallery-item">
+                <img src="assets/15.png">
+            </a>
+            <a class="gallery-item">
+                <img src="assets/15.png">
+            </a>
+            <a class="gallery-item">
+                <video autoplay muted>
+                    <source src="assets/video.mp4" type="video/mp4">
+                </video>
+            </a>
+        </div>
+    </div>
+
+    <div id="store" class="page">
+        <h2>STORE</h2>
     </div>
 </body>
 </html>

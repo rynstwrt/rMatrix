@@ -4,11 +4,16 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #111111;
   color: white;
   font-family: "Mulish", sans-serif;
   width: 100%;
+  overflow-x: hidden;
 }
 
 a {
@@ -50,50 +55,16 @@ nav ul li {
   margin-left: 7px;
 }
 
-#popup {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #111111;
-  position: fixed;
-  z-index: 9999;
-  padding: 20px;
-  display: none;
-  flex-direction: column;
-}
-#popup #popup-exit {
-  display: flex;
-}
-#popup #popup-exit a {
-  margin-left: auto;
-  font-size: 20px;
-}
-#popup #popup-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#popup #popup-content video {
-  width: 100%;
-}
-#popup #popup-content img {
-  width: 100%;
-}
-
 .page {
   width: 100vw;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  margin-bottom: 100px;
+  padding: 75px 40px 40px 40px;
 }
 .page h2 {
   text-align: right;
   font-size: 40px;
-  padding: 10px;
-  margin-right: 20px;
   font-family: "Major Mono Display", monospace;
   border-bottom: 2px solid #FF7759;
   display: flex;
@@ -103,7 +74,7 @@ nav ul li {
 .page p {
   text-align: right;
   font-size: 25px;
-  padding: 0 20px 25px 100px;
+  margin-bottom: 25px;
   margin-left: auto;
   letter-spacing: 3px;
 }
@@ -140,6 +111,26 @@ nav ul li {
   padding: 1px;
 }
 #home #grid .grid-square .grid-square-content {
+  width: 100%;
+  height: 100%;
+}
+
+#gallery #gallery-container {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+#gallery #gallery-container .gallery-item {
+  flex: 50%;
+  height: 200px;
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#gallery #gallery-container .gallery-item img {
   width: 100%;
   height: 100%;
 }
