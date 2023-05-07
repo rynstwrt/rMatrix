@@ -8,10 +8,7 @@ body {
   background-color: #111111;
   color: white;
   font-family: "Mulish", sans-serif;
-}
-
-h1, h2, h3 {
-  font-family: "Bungee", cursive;
+  width: 100%;
 }
 
 nav {
@@ -21,13 +18,14 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: #282A29;
-  padding: 30px 50px;
+  padding: 10px 20px;
   z-index: 10;
 }
 nav h3 {
-  font-size: 50px;
-  letter-spacing: 6px;
+  font-size: 20px;
+  letter-spacing: 1px;
   color: #FF7759;
+  font-family: "Major Mono Display", monospace;
 }
 nav ul {
   display: flex;
@@ -35,11 +33,11 @@ nav ul {
   list-style: none;
 }
 nav ul li {
-  margin-left: 25px;
+  margin-left: 7px;
 }
 nav ul li a {
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 13px;
 }
 nav ul li a, nav ul li a:visited {
   color: white;
@@ -50,25 +48,26 @@ nav ul li a:hover {
   color: #FF7759;
 }
 
-p {
-  font-size: 30px;
-}
-
 .page {
   width: 100vw;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 75vh;
 }
 .page h2 {
   text-align: right;
-  font-size: 100px;
-  padding: 70px 50px 0 0;
-  text-decoration: underline;
-  text-transform: uppercase;
+  font-size: 40px;
+  padding: 10px 20px;
+  margin-right: 20px;
+  font-family: "Major Mono Display", monospace;
+  border: 2px solid #FF7759;
+  display: flex;
+  margin-left: auto;
 }
 .page p {
   text-align: right;
-  font-size: 60px;
-  padding: 100px 50px 0 200px;
+  font-size: 25px;
+  padding: 25px 20px 0 100px;
   margin-left: auto;
   letter-spacing: 3px;
 }
@@ -78,36 +77,32 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 #home h1 {
-  font-size: 110px;
-  letter-spacing: 15px;
-  margin-bottom: 70px;
-  text-shadow: 0 0 20px #FF7759;
-  text-decoration: underline;
+  font-size: 50px;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: "Major Mono Display", monospace;
 }
 #home #grid {
   display: flex;
   flex-wrap: wrap;
   background-color: #282A29;
-  padding: 35px;
-  width: 750px;
-  max-height: 750px;
+  padding: 10px;
+  width: 275px;
+  max-height: 275px;
   box-sizing: content-box;
 }
 #home #grid .grid-square {
-  width: 46.875px;
-  height: 46.875px;
-  padding: 7px;
+  width: 17.1875px;
+  height: 17.1875px;
+  padding: 1px;
 }
 #home #grid .grid-square .grid-square-content {
   width: 100%;
   height: 100%;
-}
-
-#about {
-  display: flex;
-  flex-direction: column;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -5,7 +5,7 @@ $text-for-background: white;
 $text-for-surface: white;
 $text-for-primary: white;
 
-$header-font: "Bungee", cursive;
+$header-font: "Major Mono Display", monospace;
 $content-font: "Mulish", sans-serif;
 
 *
@@ -20,11 +20,7 @@ body
     background-color: $background-color;
     color: $text-for-surface;
     font-family: $content-font;
-}
-
-h1, h2, h3
-{
-    font-family: $header-font;
+    width: 100%;
 }
 
 nav
@@ -35,14 +31,15 @@ nav
     justify-content: space-between;
     align-items: center;
     background-color: $surface-color;
-    padding: 30px 50px;
+    padding: 10px 20px;
     z-index: 10;
 
     h3
     {
-        font-size: 50px;
-        letter-spacing: 6px;
+        font-size: 20px;
+        letter-spacing: 1px;
         color: $primary-color;
+        font-family: $header-font;
     }
 
     ul
@@ -53,12 +50,12 @@ nav
 
         li
         {
-            margin-left: 25px;
+            margin-left: 7px;
 
             a
             {
                 text-transform: uppercase;
-                font-size: 30px;
+                font-size: 13px;
 
                 &, &:visited
                 {
@@ -76,30 +73,30 @@ nav
     }
 }
 
-p
-{
-    font-size: 30px;
-}
-
 .page
 {
     width: 100vw;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 75vh;
 
     h2
     {
         text-align: right;
-        font-size: 100px;
-        padding: 70px 50px 0 0;
-        text-decoration: underline;
-        text-transform: uppercase;
+        font-size: 40px;
+        padding: 10px 20px;
+        margin-right: 20px;
+        font-family: $header-font;
+        border: 2px solid $primary-color;
+        display: flex;
+        margin-left: auto;
     }
 
     p
     {
         text-align: right;
-        font-size: 60px;
-        padding: 100px 50px 0 200px;
+        font-size: 25px;
+        padding: 25px 20px 0 100px;
         margin-left: auto;
         letter-spacing: 3px;
     }
@@ -111,14 +108,15 @@ p
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 
     h1
     {
-        font-size: 110px;
-        letter-spacing: 15px;
-        margin-bottom: 70px;
-        text-shadow: 0 0 20px $primary-color;
-        text-decoration: underline;
+        font-size: 50px;
+        letter-spacing: 3px;
+        margin-bottom: 30px;
+        text-align: center;
+        font-family: $header-font;
     }
 
     #grid
@@ -126,8 +124,8 @@ p
         display: flex;
         flex-wrap: wrap;
         background-color: $surface-color;
-        padding: 35px;
-        $grid-size: 750px;
+        padding: 10px;
+        $grid-size: 275px;
         width: $grid-size;
         max-height: $grid-size;
         box-sizing: content-box;
@@ -136,13 +134,12 @@ p
         {
             width: $grid-size / 16;
             height: $grid-size / 16;
-            padding: 7px;
+            padding: 1px;
 
             .grid-square-content
             {
                 width: 100%;
                 height: 100%;
-                //background-color: red;
             }
         }
     }
@@ -150,6 +147,5 @@ p
 
 #about
 {
-    display: flex;
-    flex-direction: column;
+
 }
