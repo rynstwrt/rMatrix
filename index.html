@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/anime.min.js"></script>
     <script src="js/animations.js" defer></script>
+    <script src="js/gallery.js" defer></script>
 </head>
 <body>
     <nav id="navigation">
@@ -18,9 +19,18 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#store">Store</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#gallery">Gallery</a></li>
         </ul>
     </nav>
+
+    <div id="popup">
+        <div id="popup-exit">
+            <a href="#">X</a>
+        </div>
+        <div id="popup-content">
+            <video loop autoplay muted controls></video>
+        </div>
+    </div>
 
     <div id="home" class="page">
         <h1>rMatrix</h1>
@@ -28,18 +38,19 @@
     </div>
 
     <div id="about" class="page">
-        <h2>About</h2>
+        <h2>ABOUT</h2>
         <p>rMatrix is an LED matrix fueled by a powerful custom firmware.</p>
         <p>This is more info about rMatrix.</p>
     </div>
 
     <div id="store" class="page">
-        <h2>Store</h2>
+        <h2>STORE</h2>
     </div>
 
-    <div id="contact" class="page">
-        <h2>Contact</h2>
-
+    <div id="gallery" class="page">
+        <h2>GALLERY</h2>
+        <a onclick="openPopup('video', 'http://clips.vorwaerts-gmbh.de/VfE.ogv');">Text Video</a>
+        <a onclick="openPopup('image', 'assets/15.png');">Text Img</a>
     </div>
 </body>
 </html>
