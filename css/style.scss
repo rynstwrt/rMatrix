@@ -1,5 +1,5 @@
 $background-color: #111111;
-$surface-color: #282A29;
+$surface-color: #2C2C2C;
 $primary-color: #FF7759;
 $text-for-background: white;
 $text-for-surface: white;
@@ -30,8 +30,9 @@ nav
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $surface-color;
-    padding: 10px 20px;
+    background-color: $background-color;
+    border-bottom: 1px solid $primary-color;
+    padding: 15px 20px;
     z-index: 10;
 
     h3
@@ -78,16 +79,17 @@ nav
     width: 100vw;
     display: flex;
     flex-direction: column;
-    min-height: 75vh;
+    margin-bottom: 100px;
 
     h2
     {
         text-align: right;
         font-size: 40px;
-        padding: 10px 20px;
+        padding: 10px;
         margin-right: 20px;
         font-family: $header-font;
         border: 2px solid $primary-color;
+        border-radius: 10px;
         display: flex;
         margin-left: auto;
     }
@@ -112,11 +114,14 @@ nav
 
     h1
     {
-        font-size: 50px;
+        font-size: 40px;
         letter-spacing: 3px;
         margin-bottom: 30px;
         text-align: center;
         font-family: $header-font;
+        border: 2px solid $primary-color;
+        border-radius: 10px;
+        padding: 10px;
     }
 
     #grid
