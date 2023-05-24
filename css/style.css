@@ -129,24 +129,17 @@ nav ul li {
   box-shadow: -1px 1px #FF7759;
 }
 
-#gallery #gallery-container {
-  width: 100%;
-  flex: 1;
-  display: flex;
-  flex-wrap: wrap;
+#gallery {
+  align-items: flex-end;
 }
-#gallery #gallery-container .gallery-item {
-  flex: 50%;
-  height: 200px;
-  overflow: hidden;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#gallery ul {
+  list-style: decimal-leading-zero;
 }
-#gallery #gallery-container .gallery-item img {
-  width: 100%;
-  height: 100%;
+#gallery ul li {
+  margin-bottom: 5px;
+}
+#gallery ul li a {
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
